@@ -25,14 +25,24 @@ jobs:
           cache: true
 
       - run: flutter pub get
-      - run: flutter build apk --release
 
       - name: Get version
         id: version
         run: echo "tag=${GITHUB_REF#refs/tags/}" >> "$GITHUB_OUTPUT"
 
-      - name: Rename APK
-        run: cp build/app/outputs/flutter-apk/app-release.apk "build/app/outputs/flutter-apk/perdiem-${{ steps.version.outputs.tag }}.apk"
+      - name: Build split APKs per architecture
+        run: flutter build apk --release --split-per-abi
+
+      - name: Build universal APK
+        run: flutter build apk --release
+
+      - name: Rename APKs
+        run: |
+          cd build/app/outputs/flutter-apk
+          mv app-arm64-v8a-release.apk    "perdiem-${{ steps.version.outputs.tag }}-arm64-v8a.apk"
+          mv app-armeabi-v7a-release.apk   "perdiem-${{ steps.version.outputs.tag }}-armeabi-v7a.apk"
+          mv app-x86_64-release.apk        "perdiem-${{ steps.version.outputs.tag }}-x86_64.apk"
+          mv app-release.apk               "perdiem-${{ steps.version.outputs.tag }}-universal.apk"
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
@@ -42,9 +52,21 @@ jobs:
             ## Perdiem ${{ steps.version.outputs.tag }}
 
             ### Download
-            - **perdiem-${{ steps.version.outputs.tag }}.apk** — Android release APK
+
+            | APK | Architecture | Description |
+            |-----|-------------|-------------|
+            | `perdiem-${{ steps.version.outputs.tag }}-arm64-v8a.apk` | ARM64 | Most modern Android phones (推荐) |
+            | `perdiem-${{ steps.version.outputs.tag }}-armeabi-v7a.apk` | ARM32 | Older/low-end devices |
+            | `perdiem-${{ steps.version.outputs.tag }}-x86_64.apk` | x86_64 | Emulators, Chromebooks |
+            | `perdiem-${{ steps.version.outputs.tag }}-universal.apk` | All | Works on all devices (larger size) |
+
+            > Not sure which to download? Choose **arm64-v8a** for most phones, or **universal** if unsure.
 
             ### Changes
             See [commit history](https://github.com/${{ github.repository }}/commits/${{ steps.version.outputs.tag }}) for details.
-          files: build/app/outputs/flutter-apk/perdiem-${{ steps.version.outputs.tag }}.apk
+          files: |
+            build/app/outputs/flutter-apk/perdiem-${{ steps.version.outputs.tag }}-arm64-v8a.apk
+            build/app/outputs/flutter-apk/perdiem-${{ steps.version.outputs.tag }}-armeabi-v7a.apk
+            build/app/outputs/flutter-apk/perdiem-${{ steps.version.outputs.tag }}-x86_64.apk
+            build/app/outputs/flutter-apk/perdiem-${{ steps.version.outputs.tag }}-universal.apk
           fail_on_unmatched_files: true
