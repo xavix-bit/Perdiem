@@ -66,19 +66,6 @@ lib/
 └── widgets/       # Reusable UI components
 ```
 
-## Building
-
-```bash
-# Android
-flutter build apk --release
-
-# iOS
-flutter build ios
-
-# macOS
-flutter build macos
-```
-
 ## License
 
 MIT
