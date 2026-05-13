@@ -43,3 +43,14 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+/android/build/reports
+
+# Project internal files
+.claude/
+stitch_dailycost/
+design-system/
+logo-concepts.html
+TODO.md
+CLAUDE.md
+icon.png
+.metadata
