@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>设置 - 日计</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#6d3bd7",
+                        "surface-container": "#f3ebf8",
+                        "background": "#FFFDF5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#5516be",
+                        "primary-fixed-dim": "#d0bcff",
+                        "tertiary-fixed": "#ffdcbb",
+                        "on-tertiary-fixed-variant": "#673d00",
+                        "foreground": "#1E293B",
+                        "primary-container": "#8455ef",
+                        "accent": "#8B5CF6",
+                        "surface-container-high": "#ede5f3",
+                        "secondary-fixed": "#ffd8e7",
+                        "on-secondary-fixed-variant": "#85145a",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f8f1fe",
+                        "primary": "#6b38d4",
+                        "on-primary-container": "#fffbff",
+                        "outline": "#7b7486",
+                        "secondary": "#F472B6",
+                        "border": "#E2E8F0",
+                        "surface-bright": "#fef7ff",
+                        "tertiary-container": "#a76500",
+                        "accent-foreground": "#FFFFFF",
+                        "input-border": "#CBD5E1",
+                        "surface-container-highest": "#e7e0ed",
+                        "on-background": "#1d1a23",
+                        "inverse-surface": "#322f39",
+                        "on-surface": "#1d1a23",
+                        "secondary-fixed-dim": "#ffafd3",
+                        "muted-foreground": "#64748B",
+                        "muted": "#F1F5F9",
+                        "on-surface-variant": "#494454",
+                        "on-tertiary-fixed": "#2c1700",
+                        "outline-variant": "#cbc3d7",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-variant": "#e7e0ed",
+                        "on-secondary-fixed": "#3d0026",
+                        "on-primary-fixed": "#23005c",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#ffb869",
+                        "quaternary": "#34D399",
+                        "on-secondary-container": "#76014e",
+                        "inverse-on-surface": "#f5eefb",
+                        "surface": "#fef7ff",
+                        "secondary-container": "#fc79bd",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#d0bcff",
+                        "ring": "#8B5CF6",
+                        "primary-fixed": "#e9ddff",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#ded7e4",
+                        "card": "#FFFFFF",
+                        "tertiary": "#FBBF24"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit-xs": "0.5rem",
+                        "section-padding": "6rem",
+                        "container-max": "1152px",
+                        "unit-sm": "1rem",
+                        "unit-lg": "2.5rem",
+                        "gutter": "1.5rem",
+                        "unit-md": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Outfit"],
+                        "label-caps": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Outfit"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Outfit"],
+                        "headline-sm": ["Outfit"],
+                        "body-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["31px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "label-caps": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-lg": ["39px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-sm": ["25px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-lg": ["20px", {"lineHeight": "1.5", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .pop-shadow-sm { shadow-[2px_2px_0px_0px_rgba(30,41,59,1)]; }
+        .pop-shadow-md { shadow-[4px_4px_0px_0px_rgba(30,41,59,1)]; }
+        .pop-shadow-lg { shadow-[6px_6px_0px_0px_rgba(30,41,59,1)]; }
+        
+        .bouncy-transition {
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .squiggle-bg {
+            background-image: radial-gradient(#6b38d4 0.5px, transparent 0.5px);
+            background-size: 10px 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen pb-24 overflow-x-hidden relative">
+<!-- Background Watermarks -->
+<div class="fixed top-20 -left-20 w-64 h-64 border-[12px] border-primary/5 rounded-full -z-20 pointer-events-none"></div>
+<div class="fixed bottom-40 -right-20 w-80 h-80 border-[16px] border-secondary/5 rounded-full -z-20 pointer-events-none"></div>
+<div class="fixed top-1/2 left-3/4 w-40 h-40 border-[8px] border-tertiary/5 rotate-45 -z-20 pointer-events-none"></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-background dark:bg-background border-b-2 border-on-background dark:border-outline-variant shadow-[4px_4px_0px_0px_rgba(107,56,212,0.3)] flex justify-between items-center px-gutter py-unit-sm">
+<div class="flex items-center gap-4">
+</div>
+<div class="flex items-center gap-4">
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-gutter pt-24 pb-12">
+<!-- Header Section -->
+<section class="mt-8 mb-12 flex flex-col md:flex-row justify-between items-end gap-6 relative">
+<div class="z-10">
+<h1 class="text-headline-xl font-headline-xl text-on-background mb-2">设置</h1>
+<p class="text-body-lg text-muted-foreground">个性化您的记账与资产管理体验</p>
+</div>
+<!-- Wild Decoration: Floating Geometry -->
+<div class="hidden md:block absolute -top-12 -right-8 opacity-20 pointer-events-none">
+<svg height="120" viewbox="0 0 100 100" width="120">
+<circle class="text-primary" cx="50" cy="50" fill="none" r="40" stroke="currentColor" stroke-dasharray="10 5" stroke-width="4"></circle>
+<rect class="text-secondary" fill="currentColor" height="30" width="30" x="20" y="20"></rect>
+</svg>
+</div>
+</section>
+<!-- Premium Card -->
+<!-- Settings Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Appearance Section -->
+<div class="space-y-6">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-8 h-8 bg-primary rounded-full border-2 border-foreground flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm" data-icon="palette">palette</span>
+</div>
+<h3 class="text-label-caps font-label-caps text-muted-foreground uppercase tracking-widest">外观</h3>
+</div>
+<!-- Appearance Card -->
+<div class="bg-card border-2 border-foreground rounded-xl shadow-[6px_6px_0px_0px_rgba(107,56,212,0.4)] overflow-hidden">
+<!-- Dark Mode Row -->
+<div class="p-6 border-b-2 border-muted flex items-center justify-between hover:bg-surface-container-low transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-secondary rounded-lg border-2 border-foreground flex items-center justify-center rotate-3 group-hover:rotate-0 transition-transform">
+<span class="material-symbols-outlined text-white" data-icon="dark_mode">dark_mode</span>
+</div>
+<span class="text-body-md font-bold">深色模式</span>
+</div>
+<!-- Bouncy Toggle -->
+<div class="w-12 h-6 bg-muted-foreground/20 rounded-full border-2 border-foreground relative cursor-pointer p-0.5 transition-colors">
+<div class="w-4 h-4 bg-primary border-2 border-foreground rounded-full shadow-[1px_1px_0px_0px_rgba(30,41,59,1)]"></div>
+</div>
+</div>
+<!-- Theme Color Row -->
+<div class="p-6 flex items-center justify-between hover:bg-surface-container-low transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-quaternary rounded-full border-2 border-foreground flex items-center justify-center -rotate-3 group-hover:rotate-0 transition-transform">
+<span class="material-symbols-outlined text-white" data-icon="color_lens">color_lens</span>
+</div>
+<span class="text-body-md font-bold">主题颜色</span>
+</div>
+<div class="flex gap-1">
+<div class="w-6 h-6 rounded-full bg-primary border-2 border-foreground cursor-pointer hover:scale-110 transition-transform"></div>
+<div class="w-6 h-6 rounded-full bg-secondary border-2 border-foreground cursor-pointer hover:scale-110 transition-transform"></div>
+<div class="w-6 h-6 rounded-full bg-tertiary border-2 border-foreground cursor-pointer hover:scale-110 transition-transform"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Data Section -->
+<div class="space-y-6">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-8 h-8 bg-secondary rounded-full border-2 border-foreground flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm" data-icon="database">database</span>
+</div>
+<h3 class="text-label-caps font-label-caps text-muted-foreground uppercase tracking-widest">数据</h3>
+</div>
+<!-- Data Card -->
+<div class="bg-card border-2 border-foreground rounded-xl shadow-[6px_6px_0px_0px_rgba(244,114,182,0.4)] overflow-hidden">
+<!-- Export Row -->
+<div class="p-6 border-b-2 border-muted flex items-center justify-between hover:bg-surface-container-low transition-all group cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-primary-container rounded-md border-2 border-foreground flex items-center justify-center rotate-2 group-hover:rotate-0 transition-transform">
+<span class="material-symbols-outlined text-white" data-icon="upload_file">upload</span>
+</div>
+<span class="text-body-md font-bold">导出数据</span>
+</div>
+<span class="material-symbols-outlined text-muted-foreground transform group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div><div class="p-6 border-b-2 border-muted flex items-center justify-between hover:bg-surface-container-low transition-all group cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-quaternary rounded-md border-2 border-foreground flex items-center justify-center -rotate-1 group-hover:rotate-0 transition-transform">
+<span class="material-symbols-outlined text-white" data-icon="file_download">download</span>
+</div>
+<span class="text-body-md font-bold">导入数据</span>
+</div>
+<span class="material-symbols-outlined text-muted-foreground transform group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Clear Data Row -->
+<div class="p-6 flex items-center justify-between hover:bg-error-container/20 transition-all group cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-error rounded-md border-2 border-foreground flex items-center justify-center -rotate-2 group-hover:rotate-0 transition-transform">
+<span class="material-symbols-outlined text-white" data-icon="delete_forever">delete_forever</span>
+</div>
+<span class="text-body-md font-bold text-error">清除所有数据</span>
+</div>
+<span class="material-symbols-outlined text-error transform group-hover:scale-110 transition-transform" data-icon="warning">warning</span>
+</div>
+</div>
+</div>
+<!-- About Section -->
+<div class="space-y-6 lg:col-span-1">
+<div class="flex items-center gap-2 mb-4">
+<div class="w-8 h-8 bg-quaternary rounded-full border-2 border-foreground flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm" data-icon="info">info</span>
+</div>
+<h3 class="text-label-caps font-label-caps text-muted-foreground uppercase tracking-widest">关于</h3>
+</div>
+<!-- About Card -->
+<div class="bg-card border-2 border-foreground rounded-xl shadow-[6px_6px_0px_0px_rgba(52,211,153,0.4)] overflow-hidden">
+<!-- Version Info -->
+<div class="p-6 border-b-2 border-muted flex items-center justify-between hover:bg-surface-container-low transition-colors group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-on-surface-variant rounded-full border-2 border-foreground flex items-center justify-center rotate-6 group-hover:rotate-0 transition-transform">
+<span class="material-symbols-outlined text-white" data-icon="terminal">terminal</span>
+</div>
+<span class="text-body-md font-bold">版本信息</span>
+</div>
+<span class="text-label-caps px-3 py-1 bg-muted border-2 border-foreground rounded-full shadow-[2px_2px_0px_0px_rgba(30,41,59,1)]">V2.4.0</span>
+</div>
+<!-- Rating Row -->
+<div class="p-6 flex items-center justify-between hover:bg-surface-container-low transition-all group cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-tertiary-container rounded-full border-2 border-foreground flex items-center justify-center -rotate-6 group-hover:rotate-0 transition-transform">
+<span class="material-symbols-outlined text-white" data-icon="thumb_up">thumb_up</span>
+</div>
+<span class="text-body-md font-bold">评分与支持</span>
+</div>
+<span class="material-symbols-outlined text-muted-foreground transform group-hover:translate-x-1 transition-transform" data-icon="open_in_new">open_in_new</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Logout / Footer Area -->
+<div class="mt-12 flex justify-center pb-8">
+<button class="flex items-center gap-3 px-8 py-4 bg-background border-2 border-foreground rounded-xl shadow-[4px_4px_0px_0px_rgba(186,26,26,0.3)] hover:shadow-[2px_2px_0px_0px_rgba(186,26,26,0.6)] hover:translate-y-[2px] transition-all group">
+<div class="w-8 h-8 rounded-full bg-error/10 flex items-center justify-center group-hover:bg-error transition-colors">
+<span class="material-symbols-outlined text-error group-hover:text-white transition-colors text-sm" data-icon="logout">logout</span>
+</div>
+<span class="text-error font-bold uppercase tracking-widest text-label-caps">退出当前账号</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-unit-md pb-safe py-unit-xs bg-surface-container dark:bg-surface-container-highest border-t-2 border-on-background dark:border-outline-variant shadow-[0px_-4px_0px_0px_rgba(30,41,59,1)]">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-2 hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="text-label-caps font-label-caps">首页</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-2 hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="text-label-caps font-label-caps">资产</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-4 py-2 hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="equalizer">equalizer</span>
+<span class="text-label-caps font-label-caps">统计</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary text-on-primary rounded-full px-6 py-2 shadow-[2px_2px_0px_0px_rgba(30,41,59,1)] scale-95 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="settings" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="text-label-caps font-label-caps">设置</span>
+</a>
+</nav>
+<!-- Decorative Canvas Elements -->
+<div class="fixed top-1/4 -left-12 w-24 h-24 bg-secondary/10 rounded-full blur-2xl -z-10"></div>
+<div class="fixed bottom-1/4 -right-12 w-32 h-32 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+</body></html>

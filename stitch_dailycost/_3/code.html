@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>物品详情 - MacBook Pro M3</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#6d3bd7",
+                        "surface-container": "#f3ebf8",
+                        "background": "#FFFDF5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#5516be",
+                        "primary-fixed-dim": "#d0bcff",
+                        "tertiary-fixed": "#ffdcbb",
+                        "on-tertiary-fixed-variant": "#673d00",
+                        "foreground": "#1E293B",
+                        "primary-container": "#8455ef",
+                        "accent": "#8B5CF6",
+                        "surface-container-high": "#ede5f3",
+                        "secondary-fixed": "#ffd8e7",
+                        "on-secondary-fixed-variant": "#85145a",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f8f1fe",
+                        "primary": "#6b38d4",
+                        "on-primary-container": "#fffbff",
+                        "outline": "#7b7486",
+                        "secondary": "#F472B6",
+                        "border": "#E2E8F0",
+                        "surface-bright": "#fef7ff",
+                        "tertiary-container": "#a76500",
+                        "accent-foreground": "#FFFFFF",
+                        "input-border": "#CBD5E1",
+                        "surface-container-highest": "#e7e0ed",
+                        "on-background": "#1d1a23",
+                        "inverse-surface": "#322f39",
+                        "on-surface": "#1d1a23",
+                        "secondary-fixed-dim": "#ffafd3",
+                        "muted-foreground": "#64748B",
+                        "muted": "#F1F5F9",
+                        "on-surface-variant": "#494454",
+                        "on-tertiary-fixed": "#2c1700",
+                        "outline-variant": "#cbc3d7",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-variant": "#e7e0ed",
+                        "on-secondary-fixed": "#3d0026",
+                        "on-primary-fixed": "#23005c",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#ffb869",
+                        "quaternary": "#34D399",
+                        "on-secondary-container": "#76014e",
+                        "inverse-on-surface": "#f5eefb",
+                        "surface": "#fef7ff",
+                        "secondary-container": "#fc79bd",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#d0bcff",
+                        "ring": "#8B5CF6",
+                        "primary-fixed": "#e9ddff",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#ded7e4",
+                        "card": "#FFFFFF",
+                        "tertiary": "#FBBF24"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit-xs": "0.5rem",
+                        "section-padding": "6rem",
+                        "container-max": "1152px",
+                        "unit-sm": "1rem",
+                        "unit-lg": "2.5rem",
+                        "gutter": "1.5rem",
+                        "unit-md": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Outfit"],
+                        "label-caps": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Outfit"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Outfit"],
+                        "headline-sm": ["Outfit"],
+                        "body-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["31px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "label-caps": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-lg": ["39px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-sm": ["25px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-lg": ["20px", {"lineHeight": "1.5", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .blob-mask {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        .hard-shadow-primary {
+            box-shadow: 4px 4px 0px 0px #1E293B;
+        }
+        .hard-shadow-active {
+            box-shadow: 2px 2px 0px 0px #1E293B;
+        }
+        .hard-shadow-hover {
+            box-shadow: 8px 8px 0px 0px #1E293B;
+        }
+        .squiggle-path {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: dash 3s ease-in-out forwards;
+        }
+        @keyframes dash {
+            to { stroke-dashoffset: 0; }
+        }
+        .inner-glow {
+            filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.4));
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen pb-32 overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-40 bg-background border-b-2 border-on-background hard-shadow-primary flex justify-between items-center w-full px-8 py-4">
+<h1 class="text-headline-sm font-headline-sm text-on-background">MacBook Pro M3</h1>
+<div class="flex gap-3">
+<button class="flex items-center justify-center p-2 rounded-full border-2 border-on-background hard-shadow-primary hover:translate-y-[-2px] hover:hard-shadow-hover active:translate-y-[2px] active:hard-shadow-active transition-all bg-surface">
+<span class="material-symbols-outlined text-on-background">edit</span>
+</button>
+<button class="flex items-center justify-center p-2 rounded-full border-2 border-on-background hard-shadow-primary hover:translate-y-[-2px] hover:hard-shadow-hover active:translate-y-[2px] active:hard-shadow-active transition-all bg-error-container">
+<span class="material-symbols-outlined text-error">delete</span>
+</button>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-6 md:px-10 pt-12 pb-10 relative space-y-16">
+<!-- Floating Geometric Confetti -->
+<div class="absolute top-10 left-[-20px] w-8 h-8 rounded-full bg-secondary opacity-40 animate-pulse hidden md:block"></div>
+<div class="absolute top-40 right-[-10px] w-0 h-0 border-l-[15px] border-l-transparent border-r-[15px] border-r-transparent border-b-[30px] border-b-tertiary rotate-45 hidden md:block"></div>
+<div class="absolute bottom-20 left-10 w-12 h-4 bg-primary-container rounded-full rotate-[-15deg] hidden md:block"></div>
+<!-- Main Cost Card -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="md:col-span-12 lg:col-span-8 bg-card border-2 border-on-background rounded-2xl p-10 hard-shadow-primary flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
+<div class="z-10 text-center md:text-left">
+<p class="text-label-caps font-label-caps text-on-surface-variant uppercase mb-3 tracking-widest">当前每日成本</p>
+<div class="flex items-baseline gap-2 tracking-tighter">
+<span class="text-headline-xl font-headline-xl text-on-background flex items-baseline">
+<span class="text-3xl font-bold mr-1 text-primary">¥</span>32.61
+</span>
+<span class="text-headline-sm font-headline-sm text-muted-foreground tracking-normal">/ 天</span>
+</div>
+</div>
+<div class="z-10 mt-10 md:mt-0 flex flex-col items-center">
+<div class="relative w-36 h-36"><svg class="w-full h-full transform -rotate-90">
+<circle class="text-surface-container-highest" cx="72" cy="72" fill="transparent" r="64" stroke="currentColor" stroke-width="16"></circle>
+<circle class="text-primary" cx="72" cy="72" fill="transparent" r="64" stroke="currentColor" stroke-dasharray="402.12" stroke-dashoffset="140.74" stroke-width="16"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-headline-sm font-headline-sm text-on-background">65%</span>
+</div></div>
+<p class="mt-5 text-label-caps font-label-caps text-muted-foreground tracking-widest">使用进度</p>
+</div>
+</div>
+<!-- Stats Column -->
+<div class="md:col-span-12 lg:col-span-4 grid grid-cols-1 gap-6">
+<div class="bg-primary-container text-on-primary-container p-7 rounded-2xl border-2 border-on-background hard-shadow-primary hover:rotate-[-1deg] transition-transform">
+<div class="flex justify-between items-center mb-3">
+<span class="text-label-caps font-label-caps opacity-90 tracking-wider">已用天数</span>
+<span class="material-symbols-outlined text-2xl">event_available</span>
+</div>
+<p class="text-headline-md font-headline-md">225天</p>
+</div>
+<div class="bg-surface-container-highest p-7 rounded-2xl border-2 border-on-background hard-shadow-primary">
+<div class="flex justify-between items-center mb-3">
+<span class="text-label-caps font-label-caps text-on-surface-variant tracking-wider">目标周期</span>
+<span class="material-symbols-outlined text-on-surface-variant text-2xl">timer</span>
+</div>
+<p class="text-headline-md font-headline-md">1095天</p>
+</div>
+<div class="bg-secondary text-on-secondary p-7 rounded-2xl border-2 border-on-background hard-shadow-primary hover:rotate-[1deg] transition-transform">
+<div class="flex justify-between items-center mb-3">
+<span class="text-label-caps font-label-caps opacity-90 tracking-wider">剩余天数</span>
+<span class="material-symbols-outlined text-2xl">hourglass_empty</span>
+</div>
+<p class="text-headline-md font-headline-md">870天</p>
+</div>
+</div>
+</section>
+<!-- Trend Chart Section -->
+<section>
+<div class="bg-card border-2 border-on-background rounded-2xl p-10 hard-shadow-primary">
+<div class="flex items-center gap-4 mb-10">
+<div class="w-12 h-12 rounded-full bg-tertiary flex items-center justify-center border-2 border-on-background">
+<span class="material-symbols-outlined text-on-background">trending_down</span>
+</div>
+<h2 class="text-headline-md font-headline-md">成本趋势</h2>
+</div>
+<div class="h-56 w-full relative">
+<!-- SVG Chart with Glow -->
+<svg class="w-full h-full preserve-3d overflow-visible" viewbox="0 0 1000 200">
+<defs>
+<lineargradient id="gradient-primary" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:var(--primary);stop-opacity:0.8"></stop>
+<stop offset="100%" style="stop-color:var(--primary);stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path class="opacity-30" d="M0,180 Q100,160 200,140 T400,100 T600,60 T800,40 T1000,35 V200 H0 Z" fill="url(#gradient-primary)"></path>
+<path class="text-primary squiggle-path inner-glow" d="M0,180 Q100,160 200,140 T400,100 T600,60 T800,40 T1000,35" fill="none" filter="url(#glow)" stroke="currentColor" stroke-linecap="round" stroke-width="6"></path>
+</svg>
+<div class="absolute bottom-0 left-0 w-full flex justify-between px-2 pt-6 border-t border-dashed border-outline-variant mt-4">
+<span class="text-label-caps font-label-caps text-muted-foreground tracking-wider">购买日</span>
+<span class="text-label-caps font-label-caps text-muted-foreground tracking-wider">今日</span>
+<span class="text-label-caps font-label-caps text-muted-foreground tracking-wider">目标日</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Details Grid & Image Section -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-start">
+<!-- Item Info Card -->
+<div class="bg-card border-2 border-on-background rounded-2xl p-10 hard-shadow-primary h-fit">
+<h3 class="text-headline-md font-headline-md mb-8">物品信息</h3>
+<div class="space-y-5">
+<div class="flex justify-between items-center py-4 border-b border-surface-variant">
+<span class="text-label-caps font-label-caps text-on-surface-variant tracking-wider">品牌</span>
+<span class="font-bold text-on-surface text-lg">Apple</span>
+</div>
+<div class="flex justify-between items-center py-4 border-b border-surface-variant">
+<span class="text-label-caps font-label-caps text-on-surface-variant tracking-wider">分类</span>
+<span class="font-bold text-on-surface text-lg">电子产品 / 笔记本</span>
+</div>
+<div class="flex justify-between items-center py-4 border-b border-surface-variant">
+<span class="text-label-caps font-label-caps text-on-surface-variant tracking-wider">购入价格</span>
+<span class="font-bold text-on-surface text-lg">¥15,999.00</span>
+</div>
+<div class="flex justify-between items-center py-4 border-b border-surface-variant">
+<span class="text-label-caps font-label-caps text-on-surface-variant tracking-wider">购入日期</span>
+<span class="font-bold text-on-surface text-lg">2023-11-01</span>
+</div>
+<div class="flex justify-between items-center py-4">
+<span class="text-label-caps font-label-caps text-on-surface-variant tracking-wider">折旧方式</span>
+<span class="font-bold text-on-surface text-lg">直线折旧 (3年)</span>
+</div>
+</div>
+<button class="w-full mt-10 py-5 bg-primary text-on-primary rounded-full border-2 border-on-background hard-shadow-primary flex items-center justify-center gap-3 hover:translate-y-[-2px] hover:hard-shadow-hover transition-all text-lg font-bold">
+<span>查看原始发票</span>
+<div class="w-8 h-8 rounded-full bg-white flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-base">arrow_forward</span>
+</div>
+</button>
+</div>
+<!-- Polaroid Image Card -->
+<div class="flex flex-col items-center justify-center pt-8 lg:pt-0">
+<div class="relative group rotate-1 p-4 pb-16 bg-white border-2 border-on-background hard-shadow-hover transition-all duration-300 hover:rotate-3 max-w-md w-full">
+<div class="absolute -top-4 -left-4 w-12 h-12 bg-secondary/20 rounded-full blur-xl"></div>
+<div class="absolute -bottom-4 -right-4 w-16 h-16 bg-accent/20 rounded-full blur-xl"></div>
+<div class="w-full aspect-square overflow-hidden border-2 border-on-background relative z-10">
+<img alt="MacBook Pro M3" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-105 group-hover:scale-100" data-alt="A professional studio photograph of a sleek, space black MacBook Pro laptop sitting on a minimalist wooden desk. The lighting is dramatic and high-contrast, creating deep shadows and bright highlights that emphasize the premium metallic texture. The background is a soft-focus office environment with warm, ambient lighting. The overall mood is sophisticated, modern, and aligned with a high-end digital asset management aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmCkaFXFHU580wK0gQ4ZlzZ3NE1C-ki5hT0sGNUhkrFglDDqettyOiAbbvjbpSa4NS6TRKGs7voOLDOHPzbBaPG9sQg52nJZnbp8_aHPjmSTTF1YoFiOow3Qfj7Ic_gE9JZi9cQhbzwJb4i7RqCWMsupX73MZxFnPYSqG_qnK09DVpSO6sVXtHVx6-iiB6aGxJ-ErR10g43SWofAYFp92Ku9WSe2PXi42sscrsLKre6PAoGcB0hegxoAfN7nrb3qhBHhF2TM2Q50XT"/>
+</div>
+</div>
+<p class="mt-10 text-label-caps font-label-caps text-muted-foreground italic text-center tracking-widest">最后更新于 2024-05-20 14:30</p>
+</div>
+</section>
+</main>
+<!-- Bottom Nav Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 pb-safe py-3 bg-surface-container border-t-2 border-on-background hard-shadow-primary" style="box-shadow: 0px -4px 0px 0px rgba(30,41,59,1);">
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-2 hover:bg-surface-container-high transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-label-caps font-label-caps mt-1">首页</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary text-on-primary rounded-2xl px-8 py-3 border-2 border-on-background shadow-[4px_4px_0px_0px_rgba(30,41,59,1)] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_rgba(30,41,59,1)] transition-all" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="text-label-caps font-label-caps mt-1">资产</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-2 hover:bg-surface-container-high transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined">equalizer</span>
+<span class="text-label-caps font-label-caps mt-1">统计</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-5 py-2 hover:bg-surface-container-high transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-label-caps font-label-caps mt-1">设置</span>
+</a>
+</nav>
+</body></html>

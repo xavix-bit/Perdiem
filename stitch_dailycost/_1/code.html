@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#6d3bd7",
+                    "surface-container": "#f3ebf8",
+                    "background": "#FFFDF5",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#5516be",
+                    "primary-fixed-dim": "#d0bcff",
+                    "tertiary-fixed": "#ffdcbb",
+                    "on-tertiary-fixed-variant": "#673d00",
+                    "foreground": "#1E293B",
+                    "primary-container": "#8455ef",
+                    "accent": "#8B5CF6",
+                    "surface-container-high": "#ede5f3",
+                    "secondary-fixed": "#ffd8e7",
+                    "on-secondary-fixed-variant": "#85145a",
+                    "on-error": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#f8f1fe",
+                    "primary": "#6b38d4",
+                    "on-primary-container": "#fffbff",
+                    "outline": "#7b7486",
+                    "secondary": "#F472B6",
+                    "border": "#E2E8F0",
+                    "surface-bright": "#fef7ff",
+                    "tertiary-container": "#a76500",
+                    "accent-foreground": "#FFFFFF",
+                    "input-border": "#CBD5E1",
+                    "surface-container-highest": "#e7e0ed",
+                    "on-background": "#1d1a23",
+                    "inverse-surface": "#322f39",
+                    "on-surface": "#1d1a23",
+                    "secondary-fixed-dim": "#ffafd3",
+                    "muted-foreground": "#64748B",
+                    "muted": "#F1F5F9",
+                    "on-surface-variant": "#494454",
+                    "on-tertiary-fixed": "#2c1700",
+                    "outline-variant": "#cbc3d7",
+                    "on-tertiary-container": "#fffbff",
+                    "surface-variant": "#e7e0ed",
+                    "on-secondary-fixed": "#3d0026",
+                    "on-primary-fixed": "#23005c",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed-dim": "#ffb869",
+                    "quaternary": "#34D399",
+                    "on-secondary-container": "#76014e",
+                    "inverse-on-surface": "#f5eefb",
+                    "surface": "#fef7ff",
+                    "secondary-container": "#fc79bd",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#d0bcff",
+                    "ring": "#8B5CF6",
+                    "primary-fixed": "#e9ddff",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#ded7e4",
+                    "card": "#FFFFFF",
+                    "tertiary": "#FBBF24"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit-xs": "0.5rem",
+                    "section-padding": "6rem",
+                    "container-max": "1152px",
+                    "unit-sm": "1rem",
+                    "unit-lg": "2.5rem",
+                    "gutter": "1.5rem",
+                    "unit-md": "1.5rem"
+            },
+            "fontFamily": {
+                    "headline-md": ["Outfit"],
+                    "label-caps": ["Plus Jakarta Sans"],
+                    "headline-xl": ["Outfit"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Outfit"],
+                    "headline-sm": ["Outfit"],
+                    "body-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "headline-md": ["31px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "label-caps": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg": ["39px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-sm": ["25px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["20px", {"lineHeight": "1.5", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .pop-shadow {
+            box-shadow: 4px 4px 0px 0px #1E293B;
+        }
+        .pop-shadow-lg {
+            box-shadow: 8px 8px 0px 0px #1E293B;
+        }
+        .pop-shadow-sm {
+            box-shadow: 2px 2px 0px 0px #1E293B;
+        }
+        
+        /* Enhanced Sticker Card Effects */
+        .sticker-card {
+            box-shadow: 8px 8px 0px 0px #1E293B, 4px 4px 0px 0px rgba(107, 56, 212, 0.15);
+            transform: translate(-2px, -2px);
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .sticker-card:hover {
+            transform: translate(-6px, -6px);
+            box-shadow: 12px 12px 0px 0px #1E293B, 6px 6px 0px 0px rgba(107, 56, 212, 0.15);
+        }
+        
+        .active-press:active {
+            transform: translate(2px, 2px);
+            box-shadow: 4px 4px 0px 0px #1E293B;
+        }
+        
+        /* Micro Textures */
+        .pattern-dots {
+            background-image: radial-gradient(#1E293B 1px, transparent 1px);
+            background-size: 16px 16px;
+        }
+        .bg-micro-texture {
+            background-image: radial-gradient(rgba(30, 41, 59, 0.06) 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
+        }
+        
+        .wiggle:hover {
+            animation: wiggle 0.3s ease-in-out infinite;
+        }
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-1deg); }
+            50% { transform: rotate(1deg); }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background bg-micro-texture text-on-background min-h-screen font-body-md overflow-x-hidden selection:bg-secondary selection:text-white">
+<!-- Top AppBar -->
+<header class="fixed top-0 left-0 w-full z-40 bg-background/95 backdrop-blur-sm border-b-2 border-on-background shadow-[4px_4px_0px_0px_rgba(30,41,59,1)] flex justify-center items-center px-gutter py-unit-sm">
+<div class="flex items-center gap-unit-sm">
+<h1 class="text-headline-md font-headline-md text-on-background tracking-[0.03em]">Perdiem</h1>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-28 pb-32 px-gutter max-w-container-max mx-auto relative">
+<!-- Decorative Elements (Wild Decoration) -->
+<div class="absolute top-10 -left-10 w-24 h-24 bg-secondary/20 rounded-full blur-2xl -z-10 hidden md:block"></div>
+<div class="absolute top-40 right-0 w-32 h-32 pattern-dots opacity-20 -z-10"></div>
+<div class="absolute bottom-20 left-1/2 -translate-x-1/2 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+<!-- Bento Overview Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-unit-md mb-12">
+<div class="lg:col-span-4 bg-secondary-container border-2 border-on-background p-unit-md rounded-xl sticker-card wiggle group transition-all duration-300">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 bg-white rounded-full border-2 border-on-background flex items-center justify-center pop-shadow-sm">
+<span class="material-symbols-outlined text-on-secondary-container" style="font-variation-settings: 'FILL' 1;">inventory_2</span>
+</div>
+<span class="text-label-caps font-label-caps bg-white/60 px-3 py-1.5 rounded-lg border border-on-background/15 tracking-wide">ITEMS</span>
+</div>
+<div class="mt-6">
+<h2 class="text-headline-xl font-headline-xl text-on-secondary-container">3 件物品</h2>
+<p class="text-body-md font-medium text-on-secondary-container/85 mt-1">目前正在追踪的资产总数</p>
+</div>
+</div>
+<div class="lg:col-span-8 bg-tertiary border-2 border-on-background p-unit-md rounded-xl sticker-card wiggle transition-all duration-300">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 bg-white rounded-full border-2 border-on-background flex items-center justify-center pop-shadow-sm">
+<span class="material-symbols-outlined text-on-tertiary-fixed-variant" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+<div class="flex gap-2">
+<span class="w-4 h-4 rounded-full bg-white border border-on-background shadow-sm"></span>
+<span class="w-4 h-4 rounded-full bg-on-background shadow-sm"></span>
+</div>
+</div>
+<div class="mt-6">
+<h2 class="text-headline-xl font-headline-xl text-on-tertiary-fixed-variant">¥12.5 <span class="text-headline-sm font-bold opacity-90">平均/天</span></h2>
+<p class="text-body-md font-medium text-on-tertiary-fixed-variant/85 mt-1">所有资产每日折旧成本估算</p>
+</div>
+</div>
+</section>
+<!-- Sticker Cards Section -->
+<section>
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-headline-sm font-headline-sm flex items-center gap-3">
+<span class="w-3 h-3 bg-primary rounded-full shadow-sm"></span>
+                    我的物品
+                </h3>
+<button class="text-label-caps font-label-caps text-primary underline underline-offset-4 hover:text-secondary transition-colors tracking-wide">查看全部</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-unit-md">
+<!-- Card 1: MacBook Pro -->
+<div class="bg-white border-2 border-on-background p-unit-md rounded-xl sticker-card relative overflow-hidden">
+<div class="absolute top-0 right-0 w-16 h-16 bg-primary/10 -mr-8 -mt-8 rounded-full"></div>
+<div class="flex items-start gap-4 mb-6">
+<div class="w-14 h-14 bg-surface-container border-2 border-on-background rounded-xl flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary scale-125">laptop_mac</span>
+</div>
+<div>
+<h4 class="text-headline-sm font-headline-sm tracking-tight">MacBook Pro M3</h4>
+<p class="text-label-caps font-label-caps text-muted-foreground mt-1 tracking-wide">科技资产</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="text-label-caps font-label-caps text-on-surface-variant tracking-wide">每日成本</span>
+<span class="text-headline-sm font-headline-md text-primary">¥32.61/天</span>
+</div>
+<div class="w-full h-4 bg-surface-variant border-2 border-on-background rounded-full overflow-hidden shadow-inner">
+<div class="h-full bg-primary w-[65%] border-r-2 border-on-background"></div>
+</div>
+<div class="flex justify-between text-label-caps font-label-caps opacity-70 tracking-wide">
+<span>使用 245 天</span>
+<span>预计剩余 120 天</span>
+</div>
+</div>
+</div>
+<!-- Card 2: iPhone 16 Pro -->
+<div class="bg-white border-2 border-on-background p-unit-md rounded-xl sticker-card relative overflow-hidden">
+<div class="absolute -bottom-4 -left-4 w-12 h-12 bg-secondary/15 rounded-full"></div>
+<div class="flex items-start gap-4 mb-6">
+<div class="w-14 h-14 bg-surface-container border-2 border-on-background rounded-xl flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary scale-125">smartphone</span>
+</div>
+<div>
+<h4 class="text-headline-sm font-headline-sm tracking-tight">iPhone 16 Pro</h4>
+<p class="text-label-caps font-label-caps text-muted-foreground mt-1 tracking-wide">移动设备</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="text-label-caps font-label-caps text-on-surface-variant tracking-wide">每日成本</span>
+<span class="text-headline-sm font-headline-md text-secondary">¥18.42/天</span>
+</div>
+<div class="w-full h-4 bg-surface-variant border-2 border-on-background rounded-full overflow-hidden shadow-inner">
+<div class="h-full bg-secondary w-[85%] border-r-2 border-on-background"></div>
+</div>
+<div class="flex justify-between text-label-caps font-label-caps opacity-70 tracking-wide">
+<span>使用 320 天</span>
+<span>预计剩余 45 天</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Sony A7C2 -->
+<div class="bg-white border-2 border-on-background p-unit-md rounded-xl sticker-card relative overflow-hidden">
+<div class="absolute top-1/2 -right-4 -translate-y-1/2 w-8 h-20 bg-tertiary/25 rounded-full rotate-12"></div>
+<div class="flex items-start gap-4 mb-6">
+<div class="w-14 h-14 bg-surface-container border-2 border-on-background rounded-xl flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-tertiary-container scale-125">photo_camera</span>
+</div>
+<div>
+<h4 class="text-headline-sm font-headline-sm tracking-tight">Sony A7C2</h4>
+<p class="text-label-caps font-label-caps text-muted-foreground mt-1 tracking-wide">摄影器材</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="text-label-caps font-label-caps text-on-surface-variant tracking-wide">每日成本</span>
+<span class="text-headline-sm font-headline-md text-on-tertiary-container">¥24.15/天</span>
+</div>
+<div class="w-full h-4 bg-surface-variant border-2 border-on-background rounded-full overflow-hidden shadow-inner">
+<div class="h-full bg-tertiary w-[30%] border-r-2 border-on-background"></div>
+</div>
+<div class="flex justify-between text-label-caps font-label-caps opacity-70 tracking-wide">
+<span>使用 12 天</span>
+<span>预计剩余 718 天</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Floating Action Area (CTA) -->
+<div class="mt-16 flex flex-col items-center gap-6">
+<div class="flex gap-3">
+<div class="w-6 h-6 bg-primary rounded-full pop-shadow-sm border border-on-background"></div>
+<div class="w-6 h-6 bg-secondary rounded-full pop-shadow-sm border border-on-background"></div>
+<div class="w-6 h-6 bg-tertiary rounded-full pop-shadow-sm border border-on-background"></div>
+</div>
+<button class="bg-primary text-on-primary px-12 py-5 rounded-full border-2 border-on-background shadow-[8px_8px_0_#1E293B,inset_0_-4px_0_rgba(0,0,0,0.25)] hover:-translate-y-1 hover:shadow-[10px_10px_0_#1E293B,inset_0_-4px_0_rgba(0,0,0,0.25)] active:scale-105 active:translate-y-1 active:shadow-[4px_4px_0_#1E293B,inset_0_-2px_0_rgba(0,0,0,0.25)] transition-all duration-200 flex items-center gap-3 group">
+<span class="text-headline-sm font-headline-sm tracking-wide">添加物品</span>
+<div class="w-10 h-10 bg-white rounded-full flex items-center justify-center group-hover:rotate-90 transition-transform duration-300 border border-on-background/20 shadow-inner">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">add</span>
+</div>
+</button>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-surface-container border-t-2 border-on-background flex justify-around items-center px-unit-md pb-safe py-unit-xs shadow-[0px_-4px_0px_0px_rgba(30,41,59,1)]">
+<div class="flex flex-col items-center justify-center bg-primary text-on-primary rounded-full px-6 py-2 shadow-[2px_2px_0px_0px_rgba(30,41,59,1)] scale-95 transition-all">
+<span class="material-symbols-outlined">home</span>
+<span class="text-label-caps font-label-caps text-[10px] mt-0.5 tracking-wide">首页</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-2 hover:bg-surface-container-high transition-colors rounded-xl">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="text-label-caps font-label-caps text-[10px] mt-0.5 tracking-wide">资产</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-2 hover:bg-surface-container-high transition-colors rounded-xl">
+<span class="material-symbols-outlined">equalizer</span>
+<span class="text-label-caps font-label-caps text-[10px] mt-0.5 tracking-wide">统计</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant px-4 py-2 hover:bg-surface-container-high transition-colors rounded-xl">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-label-caps font-label-caps text-[10px] mt-0.5 tracking-wide">设置</span>
+</div>
+</nav>
+<!-- Decoration Layer -->
+<div class="fixed top-24 left-10 pointer-events-none -z-20 hidden lg:block opacity-30">
+<svg fill="none" height="100" viewbox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 50C10 72.0914 27.9086 90 50 90C72.0914 90 90 72.0914 90 50C90 27.9086 72.0914 10 50 10" stroke="#F472B6" stroke-linecap="round" stroke-width="4"></path>
+<rect height="40" stroke="#FBBF24" stroke-width="4" transform="rotate(15 50 50)" width="40" x="30" y="30"></rect>
+</svg>
+</div>
+</body></html>

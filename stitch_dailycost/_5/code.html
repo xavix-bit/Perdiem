@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#e9ddff",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#d0bcff",
+                        "surface-container-highest": "#e7e0ed",
+                        "on-secondary-fixed": "#3d0026",
+                        "accent-foreground": "#FFFFFF",
+                        "accent": "#8B5CF6",
+                        "tertiary-container": "#a76500",
+                        "outline-variant": "#cbc3d7",
+                        "surface-tint": "#6d3bd7",
+                        "secondary-container": "#fc79bd",
+                        "inverse-surface": "#322f39",
+                        "secondary-fixed-dim": "#ffafd3",
+                        "on-primary-fixed-variant": "#5516be",
+                        "on-primary-fixed": "#23005c",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1d1a23",
+                        "surface-dim": "#ded7e4",
+                        "on-background": "#1d1a23",
+                        "surface-container": "#f3ebf8",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#f5eefb",
+                        "surface-bright": "#fef7ff",
+                        "primary": "#6b38d4",
+                        "outline": "#7b7486",
+                        "ring": "#8B5CF6",
+                        "on-error-container": "#93000a",
+                        "muted-foreground": "#64748B",
+                        "background": "#FFFDF5",
+                        "tertiary": "#FBBF24",
+                        "primary-fixed-dim": "#d0bcff",
+                        "tertiary-fixed-dim": "#ffb869",
+                        "on-tertiary-fixed": "#2c1700",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#F472B6",
+                        "on-secondary-container": "#76014e",
+                        "foreground": "#1E293B",
+                        "surface-container-low": "#f8f1fe",
+                        "surface-variant": "#e7e0ed",
+                        "tertiary-fixed": "#ffdcbb",
+                        "on-secondary-fixed-variant": "#85145a",
+                        "on-surface-variant": "#494454",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-container-high": "#ede5f3",
+                        "quaternary": "#34D399",
+                        "on-error": "#ffffff",
+                        "surface": "#fef7ff",
+                        "error": "#ba1a1a",
+                        "input-border": "#CBD5E1",
+                        "secondary-fixed": "#ffd8e7",
+                        "on-primary-container": "#fffbff",
+                        "primary-container": "#8455ef",
+                        "muted": "#F1F5F9",
+                        "on-tertiary-fixed-variant": "#673d00",
+                        "card": "#FFFFFF",
+                        "border": "#E2E8F0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit-xs": "0.5rem",
+                        "unit-sm": "1rem",
+                        "container-max": "1152px",
+                        "section-padding": "6rem",
+                        "gutter": "1.5rem",
+                        "unit-lg": "2.5rem",
+                        "unit-md": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Outfit"],
+                        "headline-lg": ["Outfit"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Outfit"],
+                        "headline-sm": ["Outfit"],
+                        "label-caps": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["20px", {"lineHeight": "1.5", "fontWeight": "500"}],
+                        "headline-md": ["31px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg": ["39px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                        "headline-sm": ["25px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "label-caps": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .dot-pattern {
+            background-image: radial-gradient(circle, #E2E8F0 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .pop-shadow {
+            box-shadow: 6px 6px 0px 0px #1d1a23;
+        }
+        .pop-shadow-sm {
+            box-shadow: 4px 4px 0px 0px #1d1a23;
+        }
+        .pop-shadow-mini {
+            box-shadow: 2px 2px 0px 0px #1d1a23;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background font-body-md text-on-surface min-h-screen flex items-center justify-center p-unit-sm dot-pattern relative">
+<!-- Focus: Backdrop Blur -->
+<div class="fixed inset-0 backdrop-blur-md bg-background/50 z-0"></div>
+<!-- Modal Content Canvas -->
+<div class="relative w-full max-w-md bg-card border-2 border-on-surface rounded-xl p-unit-lg pop-shadow animate-in fade-in zoom-in duration-300 overflow-visible z-10">
+<!-- Background Squiggles / Decorative Elements (Mobile suppression check: only key ones kept) -->
+<div class="absolute -top-6 -left-6 w-12 h-12 bg-tertiary border-2 border-on-surface rounded-full z-[-1] pop-shadow-mini"></div>
+<div class="absolute -bottom-4 -right-4 w-16 h-16 bg-quaternary border-2 border-on-surface rotate-12 z-[-1] pop-shadow-mini flex items-center justify-center">
+<span class="material-symbols-outlined text-white">warning</span>
+</div>
+<!-- Warning Illustration -->
+<div class="flex justify-center mb-unit-lg">
+<div class="relative group">
+<!-- Iconography Burst Effect -->
+<div class="relative w-28 h-28 bg-error-container border-4 border-on-surface rounded-full flex items-center justify-center pop-shadow-sm group-hover:rotate-12 transition-transform duration-300">
+<span class="material-symbols-outlined text-error text-[56px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">delete_forever</span>
+</div>
+<!-- Decorative Sticker Elements -->
+<div class="absolute -top-3 -right-3 w-10 h-10 bg-secondary border-2 border-on-surface rounded-lg rotate-12 flex items-center justify-center pop-shadow-mini">
+<span class="material-symbols-outlined text-white text-[20px]">close</span>
+</div>
+</div>
+</div>
+<!-- Headline & Subtext -->
+<div class="text-center space-y-unit-xs mb-unit-lg">
+<h1 class="font-headline-md text-headline-md text-on-surface">确定要删除吗？</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[280px] mx-auto">此操作无法撤销，该物品的所有记录将永久删除。</p>
+</div>
+<!-- Preview Card (Bento Style) -->
+<div class="bg-surface-container border-2 border-on-surface rounded-xl p-unit-sm mb-unit-lg flex items-center gap-unit-sm pop-shadow-mini">
+<div class="w-16 h-16 bg-white border-2 border-on-surface rounded-lg flex items-center justify-center overflow-hidden shrink-0">
+<img alt="MacBook Pro M3" class="w-12 h-12 object-contain" data-alt="A clean, vector-style illustration of a modern MacBook Pro laptop in space gray. The image is rendered in a minimalist flat design style that perfectly fits the vibrant and high-contrast digital asset management app interface. The laptop is positioned centrally against a crisp white background with sharp outlines and high-key lighting to emphasize its sleek hardware profile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLdrv3wrGNvgcrLw6MnwZ2Z1obuWDwL5HGfXVzWh-Pkmbkf0mwV_odsfhNyjW8imNreFtclACvUtQyoB5AjhNIFKELooX8N3vc2WS0iu4PG5ly87sJbeTdfx-Erwtq4BNH2szR5luPbRHtiBaEG_ytTrCCiTuZNV5QZA0qkBj5MM9okFaod_yC4CtFfOUtKslTruKN1801nnxJZxOnuivp4yfvqV2bfb4fTyPv1huJZyoPQr6pMEqMWUddOmJ0-7EP-5akR0ZzQFcx"/>
+</div>
+<div class="flex-1 overflow-hidden">
+<div class="font-label-caps text-label-caps text-primary uppercase tracking-wider mb-1">正在删除项目</div>
+<div class="font-headline-sm text-headline-sm text-on-surface truncate">MacBook Pro M3</div>
+<div class="font-body-md text-body-md text-on-surface-variant">购买于 2023年11月</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-unit-md">
+<!-- Primary Action -->
+<button class="w-full bg-gradient-to-r from-[#ba1a1a] to-[#F472B6] text-white font-headline-sm text-headline-sm py-5 px-unit-md rounded-full border-4 border-on-surface pop-shadow-sm hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_0px_rgba(29,26,35,1)] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_rgba(29,26,35,1)] transition-all flex items-center justify-center gap-3">
+                确认删除
+                <div class="w-10 h-10 bg-white border-2 border-on-surface rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-error text-[24px]">delete</span>
+</div>
+</button>
+<!-- Secondary Action -->
+<button class="w-full bg-card text-on-surface font-body-lg text-body-lg py-5 px-unit-md rounded-full border-4 border-on-surface hover:bg-surface-container transition-colors duration-200">
+                取消
+            </button>
+</div>
+</div>
+<!-- Background Pattern/Shape for depth -->
+<div class="fixed inset-0 pointer-events-none z-[-2] flex items-center justify-center overflow-hidden">
+<svg class="w-[120%] h-[120%] opacity-10" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<circle cx="20" cy="20" fill="#6b38d4" r="15"></circle>
+<rect fill="#FBBF24" height="20" transform="rotate(15 80 70)" width="20" x="70" y="60"></rect>
+<path d="M10,80 Q30,60 50,80 T90,80" fill="none" stroke="#F472B6" stroke-width="2"></path>
+</svg>
+</div>
+</body></html>
